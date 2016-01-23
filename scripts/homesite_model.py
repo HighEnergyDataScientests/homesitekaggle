@@ -19,8 +19,8 @@ def ceate_feature_map(features):
     outfile.close()
 
 print "## Loading Data"
-train = pd.read_csv('../input/train.csv')
-test = pd.read_csv('../input/test.csv')
+train = pd.read_csv('../inputs/train.csv')
+test = pd.read_csv('../inputs/test.csv')
 
 
 print "## Data Processing"
