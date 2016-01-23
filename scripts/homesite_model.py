@@ -22,12 +22,12 @@ def ceate_feature_map(features):
         outfile.write('{0}\t{1}\tq\n'.format(i, feat))
     outfile.close()
 
-print "## Loading Data"
+print("## Loading Data")
 train = pd.read_csv('../inputs/train.csv')
 test = pd.read_csv('../inputs/test.csv')
 
 
-print "## Data Processing"
+print("## Data Processing")
 y = train.QuoteConversion_Flag.values
 train = train.drop('QuoteNumber', axis=1)
 #test = test.drop('QuoteNumber', axis=1)
@@ -54,7 +54,7 @@ test = test.drop('Date', axis=1)
 train = train.fillna(-1)
 test = test.fillna(-1)
 
-print "## Data Encoding"
+print("## Data Encoding")
 for f in train.columns:
     if train[f].dtype=='object':
         print(f)
@@ -64,12 +64,12 @@ for f in train.columns:
         test[f] = lbl.transform(list(test[f].values))
 
 features = [s for s in train.columns.ravel().tolist() if s != 'QuoteConversion_Flag']
-print "Features: ", features
+print("Features: ", features)
 #for f in sorted(set(features)):
 #    print f
 #exit()
 
-print "## Training"
+print("## Training")
 params = {"objective": "binary:logistic",
           "eta": 0.3,
           "nthread":-1,
@@ -93,7 +93,7 @@ watchlist = [(dtrain, 'train'),(dvalid, 'eval')]
 gbm = xgb.train(params, dtrain, num_boost_round, evals=watchlist, maximize=True, early_stopping_rounds=100, verbose_eval=True)
 
 
-print "## Creating Feature Importance Map"
+print("## Creating Feature Importance Map")
 ceate_feature_map(features)
 importance = gbm.get_fscore(fmap='xgb.fmap')
 importance = sorted(importance.items(), key=operator.itemgetter(1))
@@ -108,7 +108,7 @@ fig_featp = featp.get_figure()
 fig_featp.savefig('feature_importance_xgb.png',bbox_inches='tight',pad_inches=1)
 df.to_csv("feature_importance.csv")
 
-print "## Predicting test data"
+print("## Predicting test data")
 preds = gbm.predict(xgb.DMatrix(test[features]))
 test["QuoteConversion_Flag"] = preds
 test[['QuoteNumber',"QuoteConversion_Flag"]].to_csv('xgb_benchmark.csv', index=False)
