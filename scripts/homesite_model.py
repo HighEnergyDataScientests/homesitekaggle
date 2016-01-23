@@ -1,4 +1,8 @@
 #!/usr/bin/python
+###################################################################################################################
+### This code is developed by HighEnergyDataScientests Team.
+### Do not copy or modify without written approval from one of the team members.
+###################################################################################################################
 
 import pandas as pd
 import numpy as np
