@@ -10,7 +10,6 @@ We are using python 3.5 for development.
 After that you need to download xgboost library and update all the libraries in your repo:
 
 ```
-
 pip install xgboost
 
 ```
