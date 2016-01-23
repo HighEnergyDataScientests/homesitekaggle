@@ -12,3 +12,11 @@ After that you need to download xgboost library and update all the libraries in 
 ```
 pip install xgboost
 ```
+
+Then the following commands to update your libraries to the latest:
+
+```
+conda upgrade numpy scipy
+```
+
+
