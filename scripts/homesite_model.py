@@ -111,4 +111,4 @@ df.to_csv("feature_importance.csv")
 print("## Predicting test data")
 preds = gbm.predict(xgb.DMatrix(test[features]),ntree_limit=gbm.best_ntree_limit)
 test["QuoteConversion_Flag"] = preds
-test[['QuoteNumber',"QuoteConversion_Flag"]].to_csv('xgb_benchmark.csv', index=False)
+test[['QuoteNumber',"QuoteConversion_Flag"]].to_csv('test_predictions.csv', index=False)
