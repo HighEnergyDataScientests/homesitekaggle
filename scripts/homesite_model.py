@@ -109,6 +109,6 @@ fig_featp.savefig('feature_importance_xgb.png',bbox_inches='tight',pad_inches=1)
 df.to_csv("feature_importance.csv")
 
 print("## Predicting test data")
-preds = gbm.predict(xgb.DMatrix(test[features]))
+preds = gbm.predict(xgb.DMatrix(test[features]),ntree_limit=gbm.best_ntree_limit)
 test["QuoteConversion_Flag"] = preds
 test[['QuoteNumber',"QuoteConversion_Flag"]].to_csv('xgb_benchmark.csv', index=False)
