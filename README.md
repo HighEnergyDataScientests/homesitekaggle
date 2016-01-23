@@ -19,4 +19,7 @@ Then the following commands to update your libraries to the latest:
 conda upgrade numpy scipy
 ```
 
-
+To run the model, you need to go inside the scripts folder and run the following command:
+```
+python homesite_model.py
+```
