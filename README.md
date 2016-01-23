@@ -11,5 +11,4 @@ After that you need to download xgboost library and update all the libraries in 
 
 ```
 pip install xgboost
-
 ```
