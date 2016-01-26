@@ -82,6 +82,7 @@ params = {"objective": "binary:logistic",
           }
 num_boost_round = 500
 
+# We replaced gradient decend with normal equation as a training method.
 print("Train a Normal Equation model")
 X_train, X_valid = train_test_split(train, test_size=0.01)
 y_train = X_train['QuoteConversion_Flag']
