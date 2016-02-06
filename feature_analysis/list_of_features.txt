@@ -1,0 +1,690 @@
+## Loading Data
+## Data Processing
+('Features: ', ['Original_Quote_Date', 'Field6', 'Field7', 'Field8', 'Field9', 'Field10', 'Field11', 'Field12', 'CoverageField1A', 'CoverageField1B', 'CoverageField2A', 'CoverageField2B', 'CoverageField3A', 'CoverageField3B', 'CoverageField4A', 'CoverageField4B', 'CoverageField5A', 'CoverageField5B', 'CoverageField6A', 'CoverageField6B', 'CoverageField8', 'CoverageField9', 'CoverageField11A', 'CoverageField11B', 'SalesField1A', 'SalesField1B', 'SalesField2A', 'SalesField2B', 'SalesField3', 'SalesField4', 'SalesField5', 'SalesField6', 'SalesField7', 'SalesField8', 'SalesField9', 'SalesField10', 'SalesField11', 'SalesField12', 'SalesField13', 'SalesField14', 'SalesField15', 'PersonalField1', 'PersonalField2', 'PersonalField4A', 'PersonalField4B', 'PersonalField5', 'PersonalField6', 'PersonalField7', 'PersonalField8', 'PersonalField9', 'PersonalField10A', 'PersonalField10B', 'PersonalField11', 'PersonalField12', 'PersonalField13', 'PersonalField14', 'PersonalField15', 'PersonalField16', 'PersonalField17', 'PersonalField18', 'PersonalField19', 'PersonalField22', 'PersonalField23', 'PersonalField24', 'PersonalField25', 'PersonalField26', 'PersonalField27', 'PersonalField28', 'PersonalField29', 'PersonalField30', 'PersonalField31', 'PersonalField32', 'PersonalField33', 'PersonalField34', 'PersonalField35', 'PersonalField36', 'PersonalField37', 'PersonalField38', 'PersonalField39', 'PersonalField40', 'PersonalField41', 'PersonalField42', 'PersonalField43', 'PersonalField44', 'PersonalField45', 'PersonalField46', 'PersonalField47', 'PersonalField48', 'PersonalField49', 'PersonalField50', 'PersonalField51', 'PersonalField52', 'PersonalField53', 'PersonalField54', 'PersonalField55', 'PersonalField56', 'PersonalField57', 'PersonalField58', 'PersonalField59', 'PersonalField60', 'PersonalField61', 'PersonalField62', 'PersonalField63', 'PersonalField64', 'PersonalField65', 'PersonalField66', 'PersonalField67', 'PersonalField68', 'PersonalField69', 'PersonalField70', 'PersonalField71', 'PersonalField72', 'PersonalField73', 'PersonalField74', 'PersonalField75', 'PersonalField76', 'PersonalField77', 'PersonalField78', 'PersonalField79', 'PersonalField80', 'PersonalField81', 'PersonalField82', 'PersonalField83', 'PersonalField84', 'PropertyField1A', 'PropertyField1B', 'PropertyField2A', 'PropertyField2B', 'PropertyField3', 'PropertyField4', 'PropertyField5', 'PropertyField6', 'PropertyField7', 'PropertyField8', 'PropertyField9', 'PropertyField10', 'PropertyField11A', 'PropertyField11B', 'PropertyField12', 'PropertyField13', 'PropertyField14', 'PropertyField15', 'PropertyField16A', 'PropertyField16B', 'PropertyField17', 'PropertyField18', 'PropertyField19', 'PropertyField20', 'PropertyField21A', 'PropertyField21B', 'PropertyField22', 'PropertyField23', 'PropertyField24A', 'PropertyField24B', 'PropertyField25', 'PropertyField26A', 'PropertyField26B', 'PropertyField27', 'PropertyField28', 'PropertyField29', 'PropertyField30', 'PropertyField31', 'PropertyField32', 'PropertyField33', 'PropertyField34', 'PropertyField35', 'PropertyField36', 'PropertyField37', 'PropertyField38', 'PropertyField39A', 'PropertyField39B', 'GeographicField1A', 'GeographicField1B', 'GeographicField2A', 'GeographicField2B', 'GeographicField3A', 'GeographicField3B', 'GeographicField4A', 'GeographicField4B', 'GeographicField5A', 'GeographicField5B', 'GeographicField6A', 'GeographicField6B', 'GeographicField7A', 'GeographicField7B', 'GeographicField8A', 'GeographicField8B', 'GeographicField9A', 'GeographicField9B', 'GeographicField10A', 'GeographicField10B', 'GeographicField11A', 'GeographicField11B', 'GeographicField12A', 'GeographicField12B', 'GeographicField13A', 'GeographicField13B', 'GeographicField14A', 'GeographicField14B', 'GeographicField15A', 'GeographicField15B', 'GeographicField16A', 'GeographicField16B', 'GeographicField17A', 'GeographicField17B', 'GeographicField18A', 'GeographicField18B', 'GeographicField19A', 'GeographicField19B', 'GeographicField20A', 'GeographicField20B', 'GeographicField21A', 'GeographicField21B', 'GeographicField22A', 'GeographicField22B', 'GeographicField23A', 'GeographicField23B', 'GeographicField24A', 'GeographicField24B', 'GeographicField25A', 'GeographicField25B', 'GeographicField26A', 'GeographicField26B', 'GeographicField27A', 'GeographicField27B', 'GeographicField28A', 'GeographicField28B', 'GeographicField29A', 'GeographicField29B', 'GeographicField30A', 'GeographicField30B', 'GeographicField31A', 'GeographicField31B', 'GeographicField32A', 'GeographicField32B', 'GeographicField33A', 'GeographicField33B', 'GeographicField34A', 'GeographicField34B', 'GeographicField35A', 'GeographicField35B', 'GeographicField36A', 'GeographicField36B', 'GeographicField37A', 'GeographicField37B', 'GeographicField38A', 'GeographicField38B', 'GeographicField39A', 'GeographicField39B', 'GeographicField40A', 'GeographicField40B', 'GeographicField41A', 'GeographicField41B', 'GeographicField42A', 'GeographicField42B', 'GeographicField43A', 'GeographicField43B', 'GeographicField44A', 'GeographicField44B', 'GeographicField45A', 'GeographicField45B', 'GeographicField46A', 'GeographicField46B', 'GeographicField47A', 'GeographicField47B', 'GeographicField48A', 'GeographicField48B', 'GeographicField49A', 'GeographicField49B', 'GeographicField50A', 'GeographicField50B', 'GeographicField51A', 'GeographicField51B', 'GeographicField52A', 'GeographicField52B', 'GeographicField53A', 'GeographicField53B', 'GeographicField54A', 'GeographicField54B', 'GeographicField55A', 'GeographicField55B', 'GeographicField56A', 'GeographicField56B', 'GeographicField57A', 'GeographicField57B', 'GeographicField58A', 'GeographicField58B', 'GeographicField59A', 'GeographicField59B', 'GeographicField60A', 'GeographicField60B', 'GeographicField61A', 'GeographicField61B', 'GeographicField62A', 'GeographicField62B', 'GeographicField63', 'GeographicField64', 'Date'])
+('Unique value for ', 'Original_Quote_Date', ' : ', array(['2013-08-16', '2014-04-22', '2014-08-25', '2013-04-15',
+       '2014-01-25', '2014-01-18', '2013-11-01', '2014-05-14',
+       '2013-06-19', '2013-06-18', '2013-09-24', '2013-06-11',
+       '2013-10-22', '2013-08-20', '2015-02-24', '2014-10-27',
+       '2015-02-06', '2013-10-02', '2014-09-15', '2014-03-18',
+       '2014-10-15', '2014-04-03', '2015-03-31', '2013-05-30',
+       '2015-03-30', '2013-09-17', '2015-03-07', '2013-06-06',
+       '2013-01-22', '2013-04-16', '2014-03-04', '2014-02-24',
+       '2015-05-12', '2014-02-01', '2013-08-12', '2015-05-13',
+       '2014-04-13', '2014-05-02', '2015-05-18', '2015-01-28',
+       '2013-12-30', '2014-06-20', '2014-01-08', '2014-10-08',
+       '2013-07-26', '2013-07-11', '2014-12-15', '2014-12-08',
+       '2015-02-22', '2013-09-19', '2015-05-07', '2015-01-14',
+       '2013-04-22', '2014-05-29', '2014-02-12', '2014-06-02',
+       '2014-05-18', '2014-01-20', '2013-07-16', '2013-02-15',
+       '2015-03-11', '2015-03-12', '2014-07-30', '2013-08-23',
+       '2013-08-30', '2013-04-03', '2013-06-20', '2015-01-25',
+       '2013-12-10', '2015-01-05', '2013-12-03', '2014-11-18',
+       '2013-07-29', '2013-12-25', '2015-01-16', '2015-03-05',
+       '2015-05-09', '2013-08-09', '2015-04-09', '2013-02-07',
+       '2015-01-07', '2015-01-02', '2013-05-24', '2014-12-31',
+       '2014-12-04', '2015-02-05', '2013-05-13', '2013-11-19',
+       '2014-08-27', '2013-05-05', '2014-06-26', '2013-06-04',
+       '2013-01-14', '2014-06-28', '2014-02-05', '2014-10-30',
+       '2013-10-06', '2014-05-16', '2015-03-29', '2013-10-08',
+       '2015-03-21', '2014-07-15', '2014-04-02', '2013-04-02',
+       '2014-01-13', '2013-08-29', '2014-07-21', '2013-10-17',
+       '2014-08-09', '2014-04-15', '2014-07-18', '2013-01-21',
+       '2015-05-05', '2013-11-02', '2014-03-06', '2013-12-31',
+       '2015-01-03', '2013-11-13', '2015-03-09', '2013-01-11',
+       '2013-09-15', '2014-01-06', '2013-04-06', '2013-10-23',
+       '2013-10-03', '2013-10-19', '2014-02-03', '2014-12-03',
+       '2013-04-25', '2014-05-08', '2013-02-11', '2014-12-19',
+       '2014-08-13', '2014-11-11', '2015-04-27', '2015-02-20',
+       '2015-05-06', '2013-02-13', '2015-04-20', '2014-05-23',
+       '2014-03-26', '2013-09-07', '2013-11-10', '2014-02-11',
+       '2013-09-30', '2014-08-29', '2014-05-20', '2013-04-10',
+       '2015-02-21', '2014-01-07', '2014-06-13', '2015-03-25',
+       '2015-04-15', '2014-09-09', '2014-01-23', '2014-03-09',
+       '2013-04-27', '2013-10-14', '2014-03-25', '2014-05-30',
+       '2013-10-18', '2013-10-26', '2014-07-29', '2013-10-21',
+       '2015-02-13', '2014-06-19', '2014-02-21', '2013-01-30',
+       '2013-03-05', '2015-02-23', '2014-02-13', '2013-05-21',
+       '2014-03-14', '2013-03-26', '2014-04-09', '2015-02-08',
+       '2014-04-04', '2015-05-03', '2013-03-15', '2015-02-19',
+       '2014-06-18', '2013-02-16', '2013-06-05', '2013-09-29',
+       '2013-02-18', '2013-03-23', '2014-11-17', '2015-01-09',
+       '2015-03-10', '2015-03-27', '2014-02-17', '2014-08-02',
+       '2014-08-10', '2014-01-02', '2013-10-10', '2013-10-04',
+       '2013-11-12', '2014-07-31', '2014-01-30', '2013-06-25',
+       '2014-02-19', '2014-01-14', '2013-11-27', '2015-04-08',
+       '2014-10-02', '2014-12-09', '2014-07-05', '2014-03-05',
+       '2014-06-09', '2013-12-06', '2014-09-25', '2013-08-06',
+       '2013-09-13', '2013-09-20', '2014-09-18', '2015-02-04',
+       '2013-09-03', '2015-04-01', '2013-05-27', '2013-10-16',
+       '2014-09-06', '2014-12-18', '2014-09-05', '2013-07-09',
+       '2015-02-27', '2014-02-04', '2014-05-15', '2014-09-17',
+       '2014-03-19', '2013-10-31', '2013-12-27', '2013-07-02',
+       '2014-07-16', '2014-06-11', '2013-01-18', '2013-05-01',
+       '2014-06-17', '2013-05-22', '2014-04-01', '2013-07-12',
+       '2013-10-25', '2014-08-18', '2014-01-22', '2013-08-22',
+       '2013-02-08', '2014-11-19', '2014-03-20', '2015-01-29',
+       '2013-06-17', '2013-08-13', '2013-07-25', '2014-04-14',
+       '2014-10-31', '2015-03-17', '2013-10-29', '2014-01-10',
+       '2014-01-11', '2013-01-28', '2015-02-12', '2013-07-15',
+       '2014-08-08', '2013-05-03', '2013-01-26', '2013-01-03',
+       '2014-07-24', '2014-08-23', '2013-06-26', '2015-01-27',
+       '2013-05-19', '2015-04-19', '2014-06-30', '2014-02-14',
+       '2013-10-15', '2015-04-25', '2013-06-09', '2013-04-17',
+       '2014-07-02', '2014-09-08', '2014-01-15', '2015-04-07',
+       '2014-03-12', '2014-01-17', '2015-04-21', '2013-08-01',
+       '2013-07-08', '2014-09-22', '2014-07-17', '2014-10-29',
+       '2014-12-07', '2014-08-04', '2014-03-21', '2014-03-08',
+       '2014-04-30', '2013-05-14', '2014-09-19', '2013-03-21',
+       '2013-04-30', '2014-12-26', '2014-08-03', '2014-09-14',
+       '2014-11-22', '2015-02-17', '2013-03-19', '2015-04-13',
+       '2014-06-25', '2013-05-17', '2014-01-28', '2013-09-25',
+       '2014-05-21', '2013-11-08', '2013-12-28', '2015-03-18',
+       '2013-04-19', '2014-11-06', '2014-03-15', '2014-12-23',
+       '2013-10-07', '2013-05-15', '2015-02-26', '2013-09-10',
+       '2013-08-07', '2015-04-28', '2014-10-17', '2013-02-05',
+       '2013-05-07', '2014-07-08', '2013-10-24', '2015-03-08',
+       '2013-08-14', '2015-01-13', '2014-03-31', '2015-04-14',
+       '2015-01-17', '2014-09-11', '2013-01-19', '2014-11-24',
+       '2013-03-13', '2013-02-26', '2014-05-13', '2014-09-03',
+       '2013-05-20', '2013-08-11', '2014-12-12', '2013-03-27',
+       '2014-09-29', '2013-09-11', '2015-02-15', '2014-03-27',
+       '2013-12-24', '2014-11-03', '2015-03-16', '2013-12-14',
+       '2014-06-12', '2014-07-14', '2014-07-28', '2013-01-20',
+       '2014-05-03', '2014-10-28', '2014-05-06', '2015-04-10',
+       '2013-05-11', '2013-05-28', '2013-02-27', '2015-02-09',
+       '2015-03-26', '2015-03-15', '2013-04-12', '2013-03-06',
+       '2015-01-26', '2014-06-24', '2013-01-29', '2014-04-05',
+       '2013-03-04', '2013-07-14', '2013-04-11', '2014-06-04',
+       '2013-06-10', '2014-06-06', '2014-12-01', '2014-03-11',
+       '2014-11-15', '2014-02-16', '2013-12-04', '2013-02-04',
+       '2015-02-18', '2013-11-26', '2015-04-26', '2014-02-22',
+       '2013-11-11', '2014-05-12', '2014-06-14', '2013-01-05',
+       '2014-09-13', '2013-12-05', '2014-06-22', '2015-04-03',
+       '2013-07-31', '2014-12-10', '2013-11-25', '2013-03-07',
+       '2013-08-05', '2014-06-27', '2013-07-22', '2014-02-20',
+       '2013-04-26', '2014-12-02', '2013-03-28', '2013-08-25',
+       '2014-10-11', '2015-04-02', '2015-04-06', '2014-10-01',
+       '2014-11-21', '2014-11-12', '2014-05-19', '2014-12-16',
+       '2013-09-06', '2015-04-29', '2014-05-09', '2014-05-25',
+       '2013-12-09', '2014-11-30', '2014-10-06', '2013-03-12',
+       '2013-04-05', '2013-06-03', '2014-08-11', '2014-10-12',
+       '2015-02-11', '2013-09-04', '2015-05-14', '2013-01-04',
+       '2014-04-07', '2014-03-07', '2014-03-13', '2014-05-22',
+       '2013-01-17', '2013-11-14', '2014-04-18', '2013-05-02',
+       '2014-01-29', '2015-03-02', '2013-09-12', '2013-01-25',
+       '2014-07-11', '2014-01-05', '2013-08-31', '2014-04-16',
+       '2014-10-09', '2013-06-29', '2014-06-29', '2014-03-10',
+       '2013-07-05', '2013-09-16', '2013-05-25', '2013-03-11',
+       '2014-10-20', '2014-07-19', '2013-01-31', '2015-04-11',
+       '2014-12-13', '2014-08-17', '2014-09-28', '2015-01-23',
+       '2014-02-26', '2013-04-08', '2014-11-13', '2015-01-21',
+       '2013-11-18', '2013-12-20', '2013-11-07', '2014-03-23',
+       '2015-02-03', '2015-01-30', '2013-03-25', '2013-06-23',
+       '2013-04-09', '2014-06-08', '2013-04-13', '2014-03-17',
+       '2013-06-02', '2013-10-11', '2013-09-09', '2013-07-18',
+       '2015-01-15', '2013-06-13', '2015-04-17', '2013-08-08',
+       '2014-10-04', '2014-02-25', '2013-09-27', '2014-06-03',
+       '2014-10-03', '2013-01-02', '2013-07-03', '2013-06-12',
+       '2013-10-01', '2014-09-16', '2013-08-27', '2013-11-06',
+       '2013-11-09', '2015-01-01', '2014-04-19', '2013-07-23',
+       '2013-02-06', '2014-05-01', '2014-06-21', '2014-01-31',
+       '2013-04-28', '2014-04-06', '2013-09-26', '2015-02-07',
+       '2013-11-05', '2014-11-04', '2014-06-10', '2013-11-23',
+       '2014-08-21', '2014-11-07', '2013-12-15', '2014-01-21',
+       '2013-11-20', '2014-11-14', '2014-05-05', '2015-04-24',
+       '2014-08-19', '2014-11-26', '2014-03-29', '2013-02-02',
+       '2013-11-15', '2014-09-21', '2014-02-15', '2014-10-16',
+       '2014-08-26', '2013-12-19', '2015-01-04', '2015-01-08',
+       '2014-08-06', '2015-04-22', '2014-12-22', '2013-06-07',
+       '2014-02-08', '2013-02-25', '2013-09-28', '2013-03-09',
+       '2013-09-18', '2013-02-12', '2013-03-18', '2014-04-08',
+       '2013-01-08', '2014-04-29', '2013-05-06', '2013-07-10',
+       '2013-07-17', '2013-05-16', '2014-09-23', '2014-04-28',
+       '2013-07-28', '2014-11-01', '2014-02-06', '2013-09-22',
+       '2013-01-06', '2013-06-28', '2013-08-10', '2014-10-25',
+       '2014-01-16', '2013-09-02', '2013-06-21', '2013-03-01',
+       '2015-05-15', '2014-08-12', '2014-06-23', '2014-02-23',
+       '2013-10-05', '2013-02-23', '2013-12-17', '2014-04-10',
+       '2014-01-09', '2014-07-27', '2013-10-30', '2014-04-12',
+       '2014-05-26', '2014-04-23', '2013-12-02', '2014-06-01',
+       '2013-08-15', '2013-06-15', '2014-08-14', '2014-04-24',
+       '2013-07-04', '2014-08-07', '2013-08-24', '2014-03-16',
+       '2015-03-20', '2014-07-25', '2013-05-26', '2014-03-24',
+       '2013-02-03', '2014-04-17', '2014-07-01', '2015-05-11',
+       '2013-01-23', '2015-03-19', '2015-03-28', '2015-03-04',
+       '2014-11-02', '2014-09-04', '2014-04-11', '2014-11-25',
+       '2013-06-22', '2013-03-22', '2013-10-27', '2015-01-12',
+       '2014-03-03', '2013-11-22', '2013-06-08', '2013-09-23',
+       '2014-09-02', '2014-09-12', '2015-01-10', '2014-05-11',
+       '2014-05-27', '2014-07-20', '2013-12-13', '2015-01-22',
+       '2013-03-17', '2013-01-09', '2013-08-26', '2014-07-22',
+       '2013-07-19', '2014-04-25', '2013-06-16', '2014-01-04',
+       '2014-07-23', '2014-07-13', '2013-04-20', '2013-12-18',
+       '2014-03-01', '2013-02-19', '2013-02-20', '2013-11-21',
+       '2013-03-10', '2014-02-10', '2013-04-23', '2014-05-28',
+       '2013-08-18', '2014-01-27', '2013-07-20', '2013-10-28',
+       '2015-03-23', '2014-11-29', '2013-05-10', '2013-04-01',
+       '2013-09-14', '2014-10-14', '2014-11-10', '2013-03-30',
+       '2014-12-28', '2014-11-28', '2015-04-16', '2014-01-01',
+       '2014-12-05', '2014-12-14', '2014-04-21', '2013-03-14',
+       '2013-05-18', '2013-04-24', '2015-02-01', '2013-04-29',
+       '2015-04-18', '2014-10-21', '2013-09-21', '2013-11-04',
+       '2014-12-11', '2014-07-09', '2014-07-07', '2015-01-11',
+       '2015-05-02', '2013-08-21', '2013-02-21', '2013-12-08',
+       '2013-02-09', '2013-12-01', '2013-06-14', '2013-02-10',
+       '2014-10-22', '2013-07-27', '2014-08-22', '2013-03-20',
+       '2014-11-05', '2014-06-05', '2014-02-18', '2014-08-24',
+       '2013-01-16', '2014-12-29', '2013-01-15', '2015-04-23',
+       '2013-07-21', '2013-03-08', '2014-10-10', '2014-01-03',
+       '2013-05-23', '2014-08-15', '2014-12-24', '2014-03-22',
+       '2014-08-28', '2015-03-13', '2013-05-29', '2014-08-20',
+       '2015-03-03', '2015-02-25', '2013-12-22', '2014-10-13',
+       '2013-12-29', '2014-02-27', '2014-04-20', '2013-07-24',
+       '2014-02-07', '2014-12-30', '2015-01-24', '2014-09-20',
+       '2014-11-20', '2015-01-19', '2014-12-17', '2014-08-05',
+       '2014-05-31', '2014-06-16', '2013-07-01', '2013-12-11',
+       '2013-11-30', '2015-01-18', '2013-08-03', '2015-05-10',
+       '2013-01-27', '2015-02-02', '2014-01-19', '2013-08-28',
+       '2014-10-23', '2015-05-04', '2015-02-10', '2015-03-14',
+       '2013-11-29', '2013-05-08', '2014-10-26', '2014-03-30',
+       '2014-11-16', '2014-05-04', '2013-11-24', '2013-06-30',
+       '2013-11-16', '2014-09-24', '2013-12-23', '2013-01-24',
+       '2014-12-27', '2015-03-24', '2013-02-17', '2013-06-27',
+       '2014-03-02', '2015-01-20', '2014-09-07', '2014-09-01',
+       '2015-05-01', '2013-11-03', '2014-07-03', '2013-01-01',
+       '2013-10-13', '2013-08-17', '2015-01-31', '2013-07-13',
+       '2013-06-24', '2014-11-08', '2013-05-09', '2013-03-02',
+       '2014-10-05', '2013-04-21', '2015-05-17', '2013-01-07',
+       '2015-01-06', '2014-10-24', '2014-05-07', '2014-05-24',
+       '2013-02-28', '2013-07-30', '2015-04-30', '2013-02-01',
+       '2013-08-19', '2015-02-16', '2015-03-22', '2015-03-06',
+       '2014-08-30', '2014-12-06', '2013-08-02', '2014-09-30',
+       '2014-10-07', '2014-06-15', '2013-03-16', '2013-03-29',
+       '2014-07-10', '2014-01-12', '2014-09-10', '2013-12-26',
+       '2014-03-28', '2015-02-28', '2014-07-26', '2014-06-07',
+       '2013-09-05', '2014-04-26', '2013-03-03', '2013-10-09',
+       '2013-06-01', '2015-05-08', '2014-07-06', '2013-02-22',
+       '2013-01-10', '2013-10-12', '2014-01-24', '2013-08-04',
+       '2013-05-04', '2014-05-10', '2013-05-31', '2015-03-01',
+       '2013-04-07', '2013-09-01', '2013-04-18', '2014-08-16',
+       '2013-12-12', '2013-04-04', '2014-08-01', '2013-02-24',
+       '2014-12-25', '2014-10-19', '2013-12-07', '2013-12-16',
+       '2015-04-05', '2013-04-14', '2014-02-02', '2014-09-26',
+       '2014-07-12', '2015-02-14', '2015-05-16', '2013-07-06',
+       '2015-04-12', '2014-12-21', '2014-11-23', '2014-10-18',
+       '2013-01-12', '2014-11-27', '2013-01-13', '2014-02-09',
+       '2014-05-17', '2013-09-08', '2014-07-04', '2013-07-07',
+       '2014-02-28', '2013-11-17', '2013-10-20', '2014-11-09',
+       '2013-02-14', '2014-04-27', '2014-01-26', '2014-09-27',
+       '2013-03-24', '2013-03-31', '2015-04-04', '2014-08-31',
+       '2013-05-12', '2014-12-20', '2013-12-21', '2013-11-28'], dtype=object))
+('Unique value for ', 'Field6', ' : ', array(['B', 'F', 'J', 'E', 'C', 'K', 'A', 'D'], dtype=object))
+('Unique value for ', 'Field7', ' : ', array([23,  7, 10, 14, 25, 11, 20, 24, 22, 26, 19, 17,  6,  4, 21,  2,  1,
+       15,  3, 16,  8, 12, 27, 28, 13,  9,  5, 18]))
+('Unique value for ', 'Field8', ' : ', array([ 0.9403,  1.0006,  0.9769,  0.9472,  0.9258,  0.9153,  0.9691,
+        0.9919,  0.9497,  0.9893,  0.8793,  0.9485,  0.8922,  1.0101,
+        0.893 ,  0.9219,  0.9392,  0.9685,  0.887 ,  0.8746,  0.8928,
+        0.9838,  1.0005,  0.9487,  0.9313,  0.9525,  0.9559,  0.9482,
+        0.9223,  0.9566,  0.9108,  0.8945,  0.9023,  0.9489,  0.9194,
+        0.9364,  0.9368,  0.9375]))
+('Unique value for ', 'Field9', ' : ', array([ 0.0006,  0.004 ,  0.0004,  0.0007,  0.0038]))
+('Unique value for ', 'Field10', ' : ', array(['965', '548', '1,165', '1,487', '935', '564', '1,113', '1,480'], dtype=object))
+('Unique value for ', 'Field11', ' : ', array([ 1.02  ,  1.2433,  1.2665,  1.3045,  1.1886,  1.2694,  1.    ,
+        1.1161,  1.2392,  1.067 ,  1.2714]))
+('Unique value for ', 'Field12', ' : ', array(['N', 'Y'], dtype=object))
+('Unique value for ', 'CoverageField1A', ' : ', array([17,  6,  7,  3,  8, 13, 16,  5, 11,  4, 18, 10, 12, 14,  1,  9, 23,
+       19,  2, 21, -1, 15, 20, 25, 22, 24]))
+('Unique value for ', 'CoverageField1B', ' : ', array([23,  8, 12,  2, 13, 20, 19,  4, 14,  6, 17,  7, 22,  1, 15, 25, 11,
+        9,  3, 16, 24, 10,  5, 18, -1, 21]))
+('Unique value for ', 'CoverageField2A', ' : ', array([17,  6,  7,  3,  8, 13,  5, 11,  4,  9, 18, 10, 12, 15,  1, 23, 19,
+        2, 21, 16, 14, 20, 25, 22, 24]))
+('Unique value for ', 'CoverageField2B', ' : ', array([23,  8, 12,  2, 13, 20, 19,  5, 15, 24,  6, 17, 14,  4,  7, 22,  1,
+       25, 11,  9, 16, 10,  3, 18, 21]))
+('Unique value for ', 'CoverageField3A', ' : ', array([15,  5,  6,  2,  7, 17,  8,  4, 16, 14, 11, 13,  1, 10, 12, 25,  9,
+        3, 19, 20, 18, 23, 22, 21, 24]))
+('Unique value for ', 'CoverageField3B', ' : ', array([22,  7, 10,  2, 11, 23,  6, 14,  4, 12,  5, 21,  9, 18, 20,  1, 17,
+       25, 15,  3, 13, 24, 19, 16,  8]))
+('Unique value for ', 'CoverageField4A', ' : ', array([16,  5,  7,  3, 12, 11,  4,  8, 17, 10, 14,  1,  9, 22,  6, 15, 18,
+        2, 20, 13, 25, 19, 21, 24, 23]))
+('Unique value for ', 'CoverageField4B', ' : ', array([22,  8, 11,  2, 13, 20,  7, 18,  4, 14, 23,  6, 17, 19, 21,  1, 15,
+       24, 10,  9,  3, 12,  5, 25, 16]))
+('Unique value for ', 'CoverageField5A', ' : ', array([13, 25,  1]))
+('Unique value for ', 'CoverageField5B', ' : ', array([22, 25,  2,  1]))
+('Unique value for ', 'CoverageField6A', ' : ', array([13,  1, 25]))
+('Unique value for ', 'CoverageField6B', ' : ', array([23,  6, 25,  1]))
+('Unique value for ', 'CoverageField8', ' : ', array(['T', 'Y', 'X', 'W', 'V', 'U', 'Z'], dtype=object))
+('Unique value for ', 'CoverageField9', ' : ', array(['D', 'E', 'J', 'F', 'A', 'G', 'K', 'C', 'L', 'B', 'I', 'H'], dtype=object))
+('Unique value for ', 'CoverageField11A', ' : ', array([ 2,  5,  4, 15, 25,  6,  3, 11,  8, 10, 20, 13,  9,  7, 12, 19,  1,
+       18, 14, -1, 22, 23, 17, 16, 21, 24]))
+('Unique value for ', 'CoverageField11B', ' : ', array([ 1,  9,  6, 23, 10,  2, 25, 12,  5, 20, 13, 15, 19, 11, 24,  3,  4,
+        7, 22, 18, 14, 21, 17, 16, -1,  8]))
+('Unique value for ', 'SalesField1A', ' : ', array([ 7,  5,  3,  8, 25, 15,  1,  4, 10,  2, 16,  6, 12, 13, 11,  9, 14,
+       24, 17, 18, 21, 22, 20, 19, 23]))
+('Unique value for ', 'SalesField1B', ' : ', array([18, 14, 10, 19,  6, 25, 24,  1, 20, 13,  9, 15, 21,  3,  7, 17,  5,
+       11, 16,  8, 23,  4, 22,  2, 12]))
+('Unique value for ', 'SalesField2A', ' : ', array([ 3,  6,  4, 14, 25,  7,  2, 10,  5,  9, 12, 11,  1, 13, 21,  8, 24,
+       -1, 17, 18, 15, 16, 20, 22, 23, 19]))
+('Unique value for ', 'SalesField2B', ' : ', array([ 8, 18, 11, 24,  6, 25, 20,  3, 22, 17, 14, 19, 12, 21,  7,  4, 13,
+       15,  1,  9, 10, 23,  2, 16, -1,  5]))
+('Unique value for ', 'SalesField3', ' : ', array([0, 1]))
+('Unique value for ', 'SalesField4', ' : ', array([5, 4, 1, 3, 2]))
+('Unique value for ', 'SalesField5', ' : ', array([5, 3, 2, 4, 1]))
+('Unique value for ', 'SalesField6', ' : ', array([24, 11, 23,  7, 20,  1, 17, 21, 10,  4, 15,  8,  3, 16, 14, 22, 18,
+       12, 13,  9,  2,  6,  5, 19]))
+('Unique value for ', 'SalesField7', ' : ', array(['V', 'P', 'K', 'R', 'T', 'Q', 'M'], dtype=object))
+('Unique value for ', 'SalesField8', ' : ', array([48649, 26778,  8751, ...,  9716, 61320, 28442]))
+('Unique value for ', 'SalesField9', ' : ', array([0, 1]))
+('Unique value for ', 'SalesField10', ' : ', array([ 0,  1,  4,  2,  3, 10,  7,  5,  6,  8,  9, 13, 17, 12, 11, 14, 15,
+       21, 16]))
+('Unique value for ', 'SalesField11', ' : ', array([ 0,  1,  2,  4,  3,  5, 10,  7,  6, 11,  8,  9, 13, 15, 21, 14, 12,
+       16, 32, 20]))
+('Unique value for ', 'SalesField12', ' : ', array([ 0,  1,  2,  4,  3,  5, 10,  7,  6, 11,  8,  9, 13, 15, 29, 21, 14,
+       12, 16, 32, 19, 20]))
+('Unique value for ', 'SalesField13', ' : ', array([0, 4, 1, 3, 2, 6, 5, 7]))
+('Unique value for ', 'SalesField14', ' : ', array([ 0,  4,  1,  3,  2,  6,  5,  9,  8,  7, 11, 14]))
+('Unique value for ', 'SalesField15', ' : ', array([ 0,  4,  1,  3,  2,  6,  5,  9,  8,  7, 11, 14]))
+('Unique value for ', 'PersonalField1', ' : ', array([0, 1]))
+('Unique value for ', 'PersonalField2', ' : ', array([0, 1]))
+('Unique value for ', 'PersonalField4A', ' : ', array([-1, 14, 16,  2, 20,  9,  8, 25,  4,  1, 13,  7, 11, 22,  6, 18,  5,
+       15, 12, 10, 19, 17, 24, 23,  3, 21]))
+('Unique value for ', 'PersonalField4B', ' : ', array([-1, 19, 21,  2, 24, 12, 10, 25,  4,  1, 16,  8, 17, 14, 18, 15,  7,
+       22,  6, 20, 13, 23,  9, 11,  5,  3]))
+('Unique value for ', 'PersonalField5', ' : ', array([ 7,  6, 10,  9,  1,  2,  3,  4,  5]))
+('Unique value for ', 'PersonalField6', ' : ', array([0, 1]))
+('Unique value for ', 'PersonalField7', ' : ', array(['N', 'Y', nan], dtype=object))
+('Unique value for ', 'PersonalField8', ' : ', array([1, 2, 3]))
+('Unique value for ', 'PersonalField9', ' : ', array([2, 3, 1]))
+('Unique value for ', 'PersonalField10A', ' : ', array([ 5, 24,  7, -1,  4, 20, 21, 25,  6, 13,  8, 18, 19, 23,  9, 14, 10,
+       15, 17, 22, 11, 12,  1, 16,  2,  3]))
+('Unique value for ', 'PersonalField10B', ' : ', array([ 7, 25, 16, -1,  8,  3, 23,  2, 11,  5, 20, 17, 22, 15, 24, 18, 12,
+       21,  9, 19,  6, 14, 13,  4, 10,  1]))
+('Unique value for ', 'PersonalField11', ' : ', array([0, 1, 2, 3, 4]))
+('Unique value for ', 'PersonalField12', ' : ', array([1, 5, 3, 4, 2]))
+('Unique value for ', 'PersonalField13', ' : ', array([2, 1, 4, 3]))
+('Unique value for ', 'PersonalField14', ' : ', array([ 2,  5,  3,  1,  4,  6,  7, 11,  8, 10,  9, 12, 13, 32, 22, 15, 19,
+       35, 18, 25, 52, 14, 54, 20, 47, 30, 23, 21, 50, 16]))
+('Unique value for ', 'PersonalField15', ' : ', array([24, 19,  7, 13,  6,  5, 10, 17, 12,  1, 11,  8, 14,  9,  4,  3, 16,
+       18, 22, 20, 15, 21]))
+('Unique value for ', 'PersonalField16', ' : ', array(['ZA', 'XB', 'ZH', 'XO', 'YE', 'XR', 'ZG', 'ZF', 'XW', 'XS', 'ZT',
+       'XD', 'XH', 'XM', 'YH', 'ZD', 'XJ', 'ZN', 'YF', 'XX', 'XL', 'XQ',
+       'ZJ', 'ZR', 'ZW', 'XE', 'XC', 'ZK', 'XK', 'ZC', 'XZ', 'XI', 'ZE',
+       'ZU', 'YI', 'XP', 'ZO', 'ZP', 'ZB', 'XF', 'ZS', 'XT', 'XY', 'ZQ',
+       'ZI', 'XV', 'XU', 'XN', 'ZV', 'ZL'], dtype=object))
+('Unique value for ', 'PersonalField17', ' : ', array(['ZE', 'YJ', 'XS', 'XE', 'XU', 'ZQ', 'YY', 'XV', 'ZF', 'XK', 'YS',
+       'ZK', 'YF', 'YV', 'XG', 'ZL', 'ZH', 'ZW', 'XH', 'ZU', 'YH', 'XC',
+       'ZV', 'XR', 'ZI', 'XX', 'YR', 'XW', 'ZC', 'YZ', 'YU', 'YX', 'ZA',
+       'ZP', 'XI', 'YN', 'YL', 'YK', 'ZN', 'XT', 'ZT', 'XQ', 'XB', 'YI',
+       'YM', 'XL', 'YQ', 'ZG', 'ZS', 'YT', 'ZO', 'YE', 'XN', 'ZM', 'XM',
+       'YG', 'YP', 'XD', 'ZD', 'YW', 'XJ', 'ZB', 'XP', 'XO', 'ZR', 'XY'], dtype=object))
+('Unique value for ', 'PersonalField18', ' : ', array(['XR', 'YE', 'YP', 'YI', 'XQ', 'ZW', 'XT', 'XF', 'XS', 'YG', 'ZF',
+       'XZ', 'XI', 'XK', 'YF', 'ZE', 'YQ', 'ZP', 'YL', 'ZD', 'XW', 'YN',
+       'YK', 'ZJ', 'ZK', 'ZC', 'XU', 'ZN', 'XP', 'XL', 'XM', 'ZL', 'XC',
+       'ZH', 'XG', 'XN', 'XY', 'ZQ', 'XO', 'ZT', 'XJ', 'ZA', 'ZU', 'XE',
+       'ZV', 'ZS', 'YR', 'YH', 'YJ', 'ZR', 'ZO', 'YO', 'ZM', 'XD', 'YM',
+       'XX', 'ZB', 'XH', 'XV', 'ZG', 'ZI'], dtype=object))
+('Unique value for ', 'PersonalField19', ' : ', array(['XD', 'XT', 'XC', 'XX', 'ZQ', 'ZT', 'ZO', 'YJ', 'ZN', 'YH', 'ZI',
+       'YN', 'YF', 'YK', 'XY', 'XI', 'ZA', 'ZW', 'ZV', 'XU', 'ZL', 'XK',
+       'XW', 'XF', 'ZK', 'YE', 'XB', 'XZ', 'XP', 'ZJ', 'YM', 'XO', 'YG',
+       'XN', 'ZR', 'ZE', 'ZB', 'ZG', 'YL', 'ZF', 'XR', 'XJ', 'XM', 'ZP',
+       'XQ', 'XV', 'ZH', 'XE', 'ZU', 'ZM', 'XG', 'ZD', 'XH', 'XL', 'YI',
+       'XS', 'ZC'], dtype=object))
+('Unique value for ', 'PersonalField22', ' : ', array([1, 3, 4, 2, 5, 6, 7]))
+('Unique value for ', 'PersonalField23', ' : ', array([ 0,  1,  2,  3,  4,  8,  5,  6, 10, 12,  7, 14, 11]))
+('Unique value for ', 'PersonalField24', ' : ', array([ 0,  1,  2,  3,  4,  8,  5,  6, 10,  9, 12,  7, 14, 11]))
+('Unique value for ', 'PersonalField25', ' : ', array([ 0,  1,  2,  3,  6,  4,  8,  5, 10,  9, 12,  7, 14, 11]))
+('Unique value for ', 'PersonalField26', ' : ', array([ 0,  1,  2,  3,  6,  4,  9,  8,  5, 10, 12,  7, 14, 11]))
+('Unique value for ', 'PersonalField27', ' : ', array([ 1,  0,  2,  3,  4,  7, 10,  5,  9,  6, 11, 13, 15, 23, 14,  8, 12]))
+('Unique value for ', 'PersonalField28', ' : ', array([2, 1, 3, 4, 5, 6, 7]))
+('Unique value for ', 'PersonalField29', ' : ', array([2, 1, 3, 6, 4, 5, 7]))
+('Unique value for ', 'PersonalField30', ' : ', array([ 0,  1,  4,  2,  3, 14, 22,  6, 10,  5,  7,  8]))
+('Unique value for ', 'PersonalField31', ' : ', array([ 1,  0,  2,  4,  3, 15,  5, 23,  6, 11,  7,  9]))
+('Unique value for ', 'PersonalField32', ' : ', array([ 1,  0,  2,  4,  3, 15,  5,  6, 23, 11,  7,  9]))
+('Unique value for ', 'PersonalField33', ' : ', array([ 1,  0,  2,  4,  3, 15,  5,  6, 23,  7, 11,  9]))
+('Unique value for ', 'PersonalField34', ' : ', array([1, 2, 3, 4, 7, 6, 5]))
+('Unique value for ', 'PersonalField35', ' : ', array([0, 1, 2, 5, 4, 3]))
+('Unique value for ', 'PersonalField36', ' : ', array([0, 1, 2, 3, 5, 4]))
+('Unique value for ', 'PersonalField37', ' : ', array([0, 1, 2, 3, 5, 4]))
+('Unique value for ', 'PersonalField38', ' : ', array([0, 2, 1, 3, 4, 5]))
+('Unique value for ', 'PersonalField39', ' : ', array([0, 1, 2, 4, 3, 6, 8, 5, 7]))
+('Unique value for ', 'PersonalField40', ' : ', array([0, 1, 4, 2, 9, 3, 6, 8, 5, 7]))
+('Unique value for ', 'PersonalField41', ' : ', array([0, 1, 4, 2, 9, 3, 6, 5, 8, 7]))
+('Unique value for ', 'PersonalField42', ' : ', array([0, 1, 2, 4, 9, 3, 6, 5, 8, 7]))
+('Unique value for ', 'PersonalField43', ' : ', array([1, 2, 3, 4, 6, 5, 7]))
+('Unique value for ', 'PersonalField44', ' : ', array([ 0,  1,  4,  2,  3, 14, 22,  6,  5, 10,  7,  8]))
+('Unique value for ', 'PersonalField45', ' : ', array([ 1,  0,  2,  4,  3, 15,  5, 23,  6, 11,  7,  9]))
+('Unique value for ', 'PersonalField46', ' : ', array([ 1,  0,  2,  4,  3, 15,  5,  6, 23, 11,  7,  9]))
+('Unique value for ', 'PersonalField47', ' : ', array([ 1,  0,  2,  4,  3, 15,  5,  6, 23,  7, 11,  9]))
+('Unique value for ', 'PersonalField48', ' : ', array([2, 1, 3, 6, 4, 5, 7]))
+('Unique value for ', 'PersonalField49', ' : ', array([0, 1, 4, 2, 3, 6, 7]))
+('Unique value for ', 'PersonalField50', ' : ', array([0, 1, 4, 2, 3, 6, 7]))
+('Unique value for ', 'PersonalField51', ' : ', array([0, 1, 4, 2, 3, 6, 7]))
+('Unique value for ', 'PersonalField52', ' : ', array([0, 1, 2, 4, 3, 6, 7]))
+('Unique value for ', 'PersonalField53', ' : ', array([1, 3, 6, 4, 2, 5, 7]))
+('Unique value for ', 'PersonalField54', ' : ', array([ 0,  1,  4,  5,  2,  3, 10,  6,  8,  7, 12]))
+('Unique value for ', 'PersonalField55', ' : ', array([ 0,  1,  4,  5,  2,  6,  3, 10,  8,  7, 12]))
+('Unique value for ', 'PersonalField56', ' : ', array([ 0,  1,  2,  4,  3,  5,  6, 10,  8,  7, 14, 12]))
+('Unique value for ', 'PersonalField57', ' : ', array([ 0,  1,  2,  4,  3,  5,  6, 10,  9,  8,  7, 14, 12]))
+('Unique value for ', 'PersonalField58', ' : ', array([1, 2, 3, 6, 7, 4, 5]))
+('Unique value for ', 'PersonalField59', ' : ', array([0, 1, 2, 4, 3, 6, 5]))
+('Unique value for ', 'PersonalField60', ' : ', array([0, 1, 2, 4, 3, 6, 5]))
+('Unique value for ', 'PersonalField61', ' : ', array([0, 1, 2, 4, 3, 6, 5]))
+('Unique value for ', 'PersonalField62', ' : ', array([0, 1, 2, 4, 3, 6, 5]))
+('Unique value for ', 'PersonalField63', ' : ', array([1, 3, 2, 4, 6, 5, 7]))
+('Unique value for ', 'PersonalField64', ' : ', array([0, 1, 2]))
+('Unique value for ', 'PersonalField65', ' : ', array([0, 1, 2]))
+('Unique value for ', 'PersonalField66', ' : ', array([0, 1, 2]))
+('Unique value for ', 'PersonalField67', ' : ', array([0, 1, 2]))
+('Unique value for ', 'PersonalField68', ' : ', array([1, 2, 3, 4]))
+('Unique value for ', 'PersonalField69', ' : ', array([0, 1, 5, 2, 3, 4]))
+('Unique value for ', 'PersonalField70', ' : ', array([0, 1, 5, 2, 3, 4, 7]))
+('Unique value for ', 'PersonalField71', ' : ', array([0, 1, 3, 5, 2, 4, 7]))
+('Unique value for ', 'PersonalField72', ' : ', array([0, 1, 2, 3, 5, 4, 6, 7]))
+('Unique value for ', 'PersonalField73', ' : ', array([1, 3, 2, 7, 4, 5, 6]))
+('Unique value for ', 'PersonalField74', ' : ', array([ 0,  1,  2,  3,  7,  4, 22,  5]))
+('Unique value for ', 'PersonalField75', ' : ', array([ 1,  0,  2,  4,  3,  8,  6,  5, 23]))
+('Unique value for ', 'PersonalField76', ' : ', array([ 1,  0,  2,  3,  4,  8,  6,  5, 23,  7]))
+('Unique value for ', 'PersonalField77', ' : ', array([ 1,  0,  2,  3,  4,  8,  6,  5, 23,  7,  9]))
+('Unique value for ', 'PersonalField78', ' : ', array([2, 1, 3, 4, 5, 7, 6]))
+('Unique value for ', 'PersonalField79', ' : ', array([ 0,  1,  2,  3,  4,  8,  5, 10,  6,  7, 12, 14, 11]))
+('Unique value for ', 'PersonalField80', ' : ', array([ 0,  1,  2,  3,  4,  8,  5,  6, 10,  9,  7, 12, 14, 11]))
+('Unique value for ', 'PersonalField81', ' : ', array([ 0,  1,  2,  3,  6,  4,  8,  5, 10,  9,  7, 12, 14, 11]))
+('Unique value for ', 'PersonalField82', ' : ', array([ 0,  1,  2,  3,  9,  4,  8,  5,  6, 10, 12,  7, 11, 14]))
+('Unique value for ', 'PersonalField83', ' : ', array([1, 3, 2, 4, 5, 6, 7]))
+('Unique value for ', 'PersonalField84', ' : ', array([  2.,  nan,   1.,   5.,   4.,   7.,   8.,   3.]))
+('Unique value for ', 'PropertyField1A', ' : ', array([ 5, 17, 12,  1, 10,  8,  7, 13,  4, 19, 16,  3, 14, 23, 22, 11,  6,
+       25,  9, 15, 18, 24,  2, 21, 20, -1]))
+('Unique value for ', 'PropertyField1B', ' : ', array([ 7, 21, 16,  1, 13, 12, 11, 17,  5, 23, 20,  3, 14, 15, 19, 22, 24,
+       18,  9, 25,  4,  6, 10,  2,  8, -1]))
+('Unique value for ', 'PropertyField2A', ' : ', array([-1, 25]))
+('Unique value for ', 'PropertyField2B', ' : ', array([19, 22, 13,  2,  3,  9, 24, 21, 16,  5, 15, 10,  8,  6, 18, 23, 12,
+        4, 20, 25, 17]))
+('Unique value for ', 'PropertyField3', ' : ', array(['N', 'Y', nan], dtype=object))
+('Unique value for ', 'PropertyField4', ' : ', array(['N', 'Y', nan], dtype=object))
+('Unique value for ', 'PropertyField5', ' : ', array(['Y', 'N'], dtype=object))
+('Unique value for ', 'PropertyField6', ' : ', array([0]))
+('Unique value for ', 'PropertyField7', ' : ', array(['O', 'N', 'R', 'D', 'S', 'J', 'I', 'Q', 'A', 'K', 'G', 'F', 'H',
+       'E', 'L', 'C', 'P', 'M', 'B'], dtype=object))
+('Unique value for ', 'PropertyField8', ' : ', array([0, 1]))
+('Unique value for ', 'PropertyField9', ' : ', array([0, 2, 1]))
+('Unique value for ', 'PropertyField10', ' : ', array([1, 4, 2, 3, 0]))
+('Unique value for ', 'PropertyField11A', ' : ', array([-1, 25]))
+('Unique value for ', 'PropertyField11B', ' : ', array([21, 23, 24, 22, 25]))
+('Unique value for ', 'PropertyField12', ' : ', array([4, 3, 1, 2, 5, 7, 6]))
+('Unique value for ', 'PropertyField13', ' : ', array([2, 0, 1, 3]))
+('Unique value for ', 'PropertyField14', ' : ', array(['C', 'B', 'A', 'D'], dtype=object))
+('Unique value for ', 'PropertyField15', ' : ', array([ 4,  1,  2,  5, 10,  8,  9, 11, 15, 14,  6, 13, 12,  7,  3]))
+('Unique value for ', 'PropertyField16A', ' : ', array([14,  7,  9,  3,  5,  4,  6, 17, 22,  1, 25, 18,  2, 10,  8, 11, 19,
+       16, 12, 13, 15, 21, 24, 23, 20, -1]))
+('Unique value for ', 'PropertyField16B', ' : ', array([22, 15, 17,  6, 11,  8, 14, 18, 23, 25,  5,  7, 12, 24,  4,  1, 13,
+       10,  3,  2, 19, 16, 20,  9, 21, -1]))
+('Unique value for ', 'PropertyField17', ' : ', array([0, 1, 2, 3, 5, 4, 6, 7]))
+('Unique value for ', 'PropertyField18', ' : ', array([3, 1, 2, 0, 4, 5, 6, 9, 8, 7]))
+('Unique value for ', 'PropertyField19', ' : ', array([0, 1, 2, 7, 3, 5, 4, 9, 8, 6]))
+('Unique value for ', 'PropertyField20', ' : ', array([0, 1, 2]))
+('Unique value for ', 'PropertyField21A', ' : ', array([17,  6,  7,  3,  8, 13, 16,  5, 11,  4,  9, 18, 10, 12, 14,  1, 23,
+       19,  2, 21, 15, 24, 20, 25, 22, -1]))
+('Unique value for ', 'PropertyField21B', ' : ', array([23,  8, 12,  2, 13, 20, 19,  4, 14, 24,  6, 17,  7, 22,  1, 15, 25,
+       11,  9,  3, 16, 10,  5, 18, 21, -1]))
+('Unique value for ', 'PropertyField22', ' : ', array([2, 4, 3, 5, 1]))
+('Unique value for ', 'PropertyField23', ' : ', array([ 4,  1,  2, 13, 10,  3, 14, 11,  9,  8,  7,  5,  6]))
+('Unique value for ', 'PropertyField24A', ' : ', array([15,  6,  7, 13, 11,  5, 14,  4,  3, 23, 12, 17,  8, 20, 10, 19,  9,
+       16,  1, 25, 18,  2, 21, 24, 22, -1]))
+('Unique value for ', 'PropertyField24B', ' : ', array([21,  8,  9, 19, 16,  6, 20,  5,  3, 25, 18, 22,  7, 11, 24, 15, 17,
+        4, 12, 23, 14, 13,  2, 10,  1, -1]))
+('Unique value for ', 'PropertyField25', ' : ', array([ 3. ,  2. ,  1.5,  1. ,  2.5,  5. ,  4. ,  3.5,  7. ,  6. ,  0. ]))
+('Unique value for ', 'PropertyField26A', ' : ', array([ 5,  4, 14, 13, 15, 18, 11, 22,  8,  9, 16, 12,  7,  2, 19,  6, 21,
+        3, 23, 20, 25, 10,  1, 17, 24, -1]))
+('Unique value for ', 'PropertyField26B', ' : ', array([ 5,  3, 20, 18,  4, 23, 15, 25, 11, 13, 10, 21, 16,  9,  1, 24,  8,
+       12,  6, 22,  7, 19,  2, 17, 14, -1]))
+('Unique value for ', 'PropertyField27', ' : ', array([ 6,  3, 10,  4,  7, 13, 19,  1, 14, 15, 17, 12, 11,  9,  8, 18,  2]))
+('Unique value for ', 'PropertyField28', ' : ', array(['B', 'D', 'A', 'C'], dtype=object))
+('Unique value for ', 'PropertyField29', ' : ', array([  0.,  nan,   1.]))
+('Unique value for ', 'PropertyField30', ' : ', array(['N', 'Y'], dtype=object))
+('Unique value for ', 'PropertyField31', ' : ', array(['N', 'O', 'K', 'M'], dtype=object))
+('Unique value for ', 'PropertyField32', ' : ', array(['Y', 'N', nan], dtype=object))
+('Unique value for ', 'PropertyField33', ' : ', array(['G', 'H', 'E', 'F'], dtype=object))
+('Unique value for ', 'PropertyField34', ' : ', array(['Y', 'N', nan], dtype=object))
+('Unique value for ', 'PropertyField35', ' : ', array([2, 0, 1]))
+('Unique value for ', 'PropertyField36', ' : ', array(['N', 'Y', nan], dtype=object))
+('Unique value for ', 'PropertyField37', ' : ', array(['N', 'Y'], dtype=object))
+('Unique value for ', 'PropertyField38', ' : ', array(['N', 'Y', nan], dtype=object))
+('Unique value for ', 'PropertyField39A', ' : ', array([ 7, 11, 23, 24, 18,  3, 10, 25, 12,  2, 15, 21, 14, 13,  8,  4,  5,
+        9, 19, 17,  6, 16,  1, 20, 22, -1]))
+('Unique value for ', 'PropertyField39B', ' : ', array([ 5, 12, 24, 25, 22, 13,  2, 11, 14,  1, 15, 18,  6,  7,  3,  4,  8,
+       17,  9, 21, 20, 23, 19, 10, 16, -1]))
+('Unique value for ', 'GeographicField1A', ' : ', array([ 3,  8,  2,  7,  5, 17, 10,  1,  4,  6, 15, 14,  9, 13, 12, 22, 25,
+       11, 18, 19, 16, 20, 21, 23, 24, -1]))
+('Unique value for ', 'GeographicField1B', ' : ', array([ 6, 17,  4,  3,  2, 15, 11, 24, 10, 20, 16,  5,  1,  9, 12, 13,  7,
+       23, 19, 18, 22, 25,  8, 14, 21, -1]))
+('Unique value for ', 'GeographicField2A', ' : ', array([15, 19, 20, 10, 17,  6, 18,  7, 16, 12, 22,  8,  4, 14,  3, 23,  9,
+       13, 11,  5,  1, 21, 25,  2, 24, -1]))
+('Unique value for ', 'GeographicField2B', ' : ', array([14, 20, 22,  8, 18,  4, 19, 16, 11, 23,  5, 21,  2, 13, 17, 24,  7,
+        6, 12,  9,  3,  1, 10, 25, 15, -1]))
+('Unique value for ', 'GeographicField3A', ' : ', array([12, 18,  8, 13, 15, 19,  2,  9,  7, 11, 17, 10, 14, 16,  4,  1, 25,
+        6,  3, 20,  5, 21, 23, 24, 22]))
+('Unique value for ', 'GeographicField3B', ' : ', array([13, 14, 20,  9, 15, 18, 21,  1, 10,  6, 19, 11, 16,  3,  7, 25,  5,
+        8,  2, 23, 12, 17, 22,  4, 24]))
+('Unique value for ', 'GeographicField4A', ' : ', array([20, 16, 21,  9, 13, 18, 11, 14, 15, 10, 17, 19,  1,  8, 12,  7,  5,
+       25,  6, 24, 23,  2,  3,  4, 22]))
+('Unique value for ', 'GeographicField4B', ' : ', array([22, 18, 23,  7, 13, 20, 10, 15, 16, 14,  9, 19, 21,  1,  6, 12,  5,
+        3, 25,  4,  2, 17,  8, 24, 11]))
+('Unique value for ', 'GeographicField5A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField5B', ' : ', array([13, 19, 21, 23, 24, 25, 18, 15, 22, 14, 17, 16, 20, -1]))
+('Unique value for ', 'GeographicField6A', ' : ', array([ 2,  4, 13,  9, 10, 24,  1, 12,  5, 23, 11, 18, 21, 22, 14, 25, 20,
+       15, 16, 19,  7, 17,  3,  8,  6, -1]))
+('Unique value for ', 'GeographicField6B', ' : ', array([ 5, 13, 12, 21, 18, 25,  1, 22, 10,  2, 20, 16, 24, 19,  7, 14,  9,
+       17,  4, 15, 23,  3,  8,  6, 11, -1]))
+('Unique value for ', 'GeographicField7A', ' : ', array([ 1,  9, 10, 22, 11, 12, 24,  8,  2, 23, 21,  7,  6, 13, 25,  4,  3,
+        5, 14, 15, 20, 16, 19, 18, -1]))
+('Unique value for ', 'GeographicField7B', ' : ', array([ 1, 13, 14, 22, 16, 18, 25,  9,  3, 23, 10,  2, 17, 21,  8,  7, 19,
+       15,  5,  4,  6, 24, 20, -1]))
+('Unique value for ', 'GeographicField8A', ' : ', array([ 1,  5, 14,  9, 10, 24,  2, 13,  6, 23, 12, 15, 11, 18, 21, 22, 19,
+       25, 20, 17,  8,  4, 16,  7,  3, -1]))
+('Unique value for ', 'GeographicField8B', ' : ', array([ 1, 13, 21, 17, 18, 25,  8, 22, 11,  3, 20, 16, 24,  9,  2, 19, 15,
+       10,  7, 14, 23,  5,  4,  6, -1]))
+('Unique value for ', 'GeographicField9A', ' : ', array([ 2,  5,  6, 18, 12, 16, 25, 23,  1, 15,  7, 24, 13, 14, 20, 19, 22,
+       21, 17,  4,  3,  8, 11,  9, 10, -1]))
+('Unique value for ', 'GeographicField9B', ' : ', array([ 9, 12, 14, 21, 17, 19, 25,  6, 24, 13,  2, 16,  7,  3, 10,  5, 18,
+       15, 22,  8, 20,  1, 23,  4, 11, -1]))
+('Unique value for ', 'GeographicField10A', ' : ', array([-1]))
+('Unique value for ', 'GeographicField10B', ' : ', array([25, -1]))
+('Unique value for ', 'GeographicField11A', ' : ', array([ 1,  4, 15,  9, 24,  2, 14, 12, 11, 18, 13, 23, 25, 19, 10, 22, 17,
+        7,  6, 20,  5, 21,  3,  8, 16, -1]))
+('Unique value for ', 'GeographicField11B', ' : ', array([ 1, 15, 11, 22, 17, 18, 25,  2, 21, 10,  5, 20, 13,  4,  7, 16,  9,
+       19, 23,  6,  8, 12, 24,  3, -1]))
+('Unique value for ', 'GeographicField12A', ' : ', array([ 1,  8,  9, 21, 12, 13, 25,  6, 10,  2, 22, 23, 20,  7,  4, 14,  5,
+       24,  3, 15, 19, 16, 17, 18, 11, -1]))
+('Unique value for ', 'GeographicField12B', ' : ', array([ 1, 13, 15, 22, 16, 18, 25,  9,  4, 23,  2, 20, 10,  7, 19,  8, 17,
+       14,  6, 24,  3,  5, 21, -1]))
+('Unique value for ', 'GeographicField13A', ' : ', array([ 1,  5, 15,  9, 10, 24,  2, 14, 12, 16, 11, 19, 23,  4, 25, 22, 13,
+       18,  8,  7, 21, 17, 20,  6, -1]))
+('Unique value for ', 'GeographicField13B', ' : ', array([ 1, 14, 12, 22, 17, 18, 25,  9, 21, 10,  3, 20, 15, 24,  8,  2,  7,
+       23, 19, 16,  6,  4, 11,  5, -1]))
+('Unique value for ', 'GeographicField14A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField14B', ' : ', array([ 7, 13, 12, 15, 22, 20, 25, 18, 11, 16, 24,  8, 19, 10,  9, 21, 14,
+       23, 17, -1]))
+('Unique value for ', 'GeographicField15A', ' : ', array([ 1,  9, 10, 24, 23, 11,  3,  2,  7,  8, 25,  5, 22, 12,  4,  6, 13,
+       14, 20, 15, 17, 18, 16, 19, 21, -1]))
+('Unique value for ', 'GeographicField15B', ' : ', array([ 2, 11, 16, 23,  8, 13, 24, 15, 22, 18,  3, 20, 17, 12,  7, 19, 25,
+        5, 14,  4,  6,  9,  1, -1]))
+('Unique value for ', 'GeographicField16A', ' : ', array([ 1,  5,  6,  9, 10, 24,  3,  2,  8, 21, 11,  4, 12, 17, 15, 19,  7,
+       13, 16, 23, 22, 25, 20, 14, 18, -1]))
+('Unique value for ', 'GeographicField16B', ' : ', array([ 2, 12, 14, 18, 20, 25,  9, 13,  3, 17, 24, 21, 10,  7,  8, 19, 22,
+       15, 23,  5,  4,  6, 16,  1, 11, -1]))
+('Unique value for ', 'GeographicField17A', ' : ', array([13,  2,  3, 15,  7,  6, 18,  4, 12,  5, 16,  9, 21, 14,  8, 11, 19,
+       17,  1, 25, 10, 22, 24, 23, 20, -1]))
+('Unique value for ', 'GeographicField17B', ' : ', array([22, 16, 13,  3,  6,  8,  2, 18,  5, 10, 23, 11, 12, 20,  7, 17,  9,
+       15, 24,  4, 19, 14, 21, 25,  1, -1]))
+('Unique value for ', 'GeographicField18A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField18B', ' : ', array([12, 22, 17,  6,  4,  7, 15, 14, 24, 25, 16, 13, 21,  2, 10,  8, 18,
+       20, 11, 23,  5,  9,  3, 19, -1]))
+('Unique value for ', 'GeographicField19A', ' : ', array([ 3, 23, 21, 10, 17, 19, 13,  9,  1,  4, 11,  2,  7, 25, 20, 22, 14,
+       12,  8, 24, 18, 16, 15,  5,  6, -1]))
+('Unique value for ', 'GeographicField19B', ' : ', array([ 6, 24, 21, 13, 16, 18, 15,  5, 11,  1,  8, 23,  7, 20,  4,  9, 10,
+       25, 19, 22, 12, 14,  2,  3, 17, -1]))
+('Unique value for ', 'GeographicField20A', ' : ', array([ 4, 20,  2,  5,  9,  3, 21,  1, 23, 19, 25, 17,  7, 18,  6, 22, 24,
+       12, 15, 14,  8, 16, 13, 10, 11, -1]))
+('Unique value for ', 'GeographicField20B', ' : ', array([12, 22, 21,  3, 13, 14, 18, 10,  8, 23,  1,  6, 24,  7, 15,  4, 25,
+       20,  2, 16, 11, 17,  5, 19,  9, -1]))
+('Unique value for ', 'GeographicField21A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField21B', ' : ', array([10, 22, 19,  8, 24, 14, 13,  7, 17, 11,  6,  5, 15, 12, 23,  4, 21,
+       25, 18, 16,  9, 20, -1]))
+('Unique value for ', 'GeographicField22A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField22B', ' : ', array([15, 22, 19, 25, 24, 16, 18, 21, 20, 23, 17, -1]))
+('Unique value for ', 'GeographicField23A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField23B', ' : ', array([ 5, 13, 10, 24, 15, 22,  9, 18,  3,  6, 21, 17, 23,  8,  2, 19, 20,
+       11,  7,  1, 12, 16, 14, 25,  4, -1]))
+('Unique value for ', 'GeographicField24A', ' : ', array([14, 10, 18, 19, 17, 16, 24, 15, 21, 11, 20, 22,  9,  2,  5, 25, 13,
+       23,  1, 12,  7,  8,  4, -1,  3]))
+('Unique value for ', 'GeographicField24B', ' : ', array([ 9,  4, 17, 20, 16, 15, 25, 14, 11, 22,  5, 21,  8, 23, 13,  3,  2,
+       24,  6, 18,  1,  7, 10, 12, -1]))
+('Unique value for ', 'GeographicField25A', ' : ', array([16, 10, 12, 13, 17, 19, 24, 14, 18, 23,  5,  2,  8, 25, 11,  1, 20,
+       22, 15,  9,  6, 21,  4,  7, -1]))
+('Unique value for ', 'GeographicField25B', ' : ', array([16,  5,  8, 10, 17, 21, 24, 13, 20, 19,  4, 12, 11,  2, 14,  6,  3,
+       25, 18,  7, 15, 23, 22,  1, -1]))
+('Unique value for ', 'GeographicField26A', ' : ', array([15,  5,  7, 10, 21, 20, 13, 24,  6,  8,  3, 16,  2,  4, 25, 11, 19,
+        9, 22, 18,  1, 12, 14, 17, 23, -1]))
+('Unique value for ', 'GeographicField26B', ' : ', array([18,  5,  8, 10, 13, 14, 23, 22, 17,  4, 25,  7, 11,  2, 21,  1,  3,
+       16, 20,  6, 24, 12, 15, 19, -1]))
+('Unique value for ', 'GeographicField27A', ' : ', array([17, 13, 15, 16, 21, 24, 19, 22, 12, 14,  6,  2, 11, 25, 23, 10, 18,
+        9, 20,  1,  8,  5,  7, -1,  3]))
+('Unique value for ', 'GeographicField27B', ' : ', array([16,  6, 11, 14, 20, 25, 24, 18, 21,  5, 22,  4,  9,  8,  2, 10,  7,
+        3, 23, 17, 12,  1, 19, -1]))
+('Unique value for ', 'GeographicField28A', ' : ', array([11,  7,  6,  3,  9, 23, 21, 12,  5, 10, 14,  4, 17,  8, 13, 16,  2,
+       15, 25,  1, 20, 18, 24, 19, 22, -1]))
+('Unique value for ', 'GeographicField28B', ' : ', array([18, 10,  9,  3, 14, 25, 19, 24,  5, 16,  8, 15, 21,  4, 23, 13,  2,
+       17, 22,  1, 20,  6, 11, 12,  7, -1]))
+('Unique value for ', 'GeographicField29A', ' : ', array([24, 21,  8, 11,  5, 13,  6,  9,  4, 15, 12,  7, 18,  3,  1, 19, 20,
+        2, 10, 25, 16, 14, 23, 22, 17, -1]))
+('Unique value for ', 'GeographicField29B', ' : ', array([25, 24, 11, 16,  4, 20,  7, 13,  3, 22, 18, 19,  2, 10,  8,  6,  9,
+        1, 12, 17,  5, 14, 15, 23, 21, -1]))
+('Unique value for ', 'GeographicField30A', ' : ', array([ 5, 10,  7,  2, 11,  8, 12, 13, 25,  9,  4, 19,  6, 20,  3, 16, 17,
+       18,  1, 14, 15, 22, 23, 21, 24, -1]))
+('Unique value for ', 'GeographicField30B', ' : ', array([ 4, 19, 12,  1, 18, 20, 14, 21, 23, 15, 25, 13,  3, 16, 11,  5, 22,
+       24,  8, 10,  2, 17,  6,  7,  9, -1]))
+('Unique value for ', 'GeographicField31A', ' : ', array([ 7, 13, 10,  8, 15,  6,  5,  1, 14, 12, 16,  9,  4, 17, 18,  3,  2,
+       24, 25, 11, 21, 20, 22, 19, 23, -1]))
+('Unique value for ', 'GeographicField31B', ' : ', array([10, 21, 15, 11, 20, 22,  7,  5,  1, 16, 19, 17, 23, 13,  3, 24, 14,
+        4,  8, 12,  2,  6,  9, 18, 25, -1]))
+('Unique value for ', 'GeographicField32A', ' : ', array([13,  9, 11,  3,  6, 19,  4, 12,  5,  7, 14,  1, 10, 25,  8,  2, 20,
+       22, 23, 15, 17, 16, 18, 24, 21, -1]))
+('Unique value for ', 'GeographicField32B', ' : ', array([20, 15, 18,  3,  8, 24,  4, 21, 19,  6, 12, 11,  1, 17, 25, 10, 13,
+        5,  2, 14, 16,  7, 22,  9, 23, -1]))
+('Unique value for ', 'GeographicField33A', ' : ', array([14,  4, 12, 11,  8,  6, 10,  2,  5, 23,  1,  7, 13, 19,  3, 21,  9,
+       25, 15, 17, 20, 16, 18, 22, 24, -1]))
+('Unique value for ', 'GeographicField33B', ' : ', array([21,  3, 19, 17, 11,  8, 16,  1,  6, 18,  7, 25, 20, 24,  9,  2,  5,
+       12, 10, 14, 13, 15, 22, 23,  4, -1]))
+('Unique value for ', 'GeographicField34A', ' : ', array([12, 13, 15,  1, 16, 14, 17,  9,  8,  6, 10,  4, 19,  3, 25, 22, 11,
+        7,  5, 18, 20,  2, 23, 21, 24, -1]))
+('Unique value for ', 'GeographicField34B', ' : ', array([14, 17, 20,  1, 21, 19, 22, 10,  7,  5, 12,  2, 11, 24, 25, 23,  9,
+        4,  3,  6, 16,  8, 13, 15, 18, -1]))
+('Unique value for ', 'GeographicField35A', ' : ', array([14,  6, 10,  9,  7, 12,  4, 17, 11, 13,  3, 18,  5,  8,  1,  2, 15,
+       21, 20, 25, 22, 16, 23, 19, 24, -1]))
+('Unique value for ', 'GeographicField35B', ' : ', array([22,  9, 17, 16, 11, 20,  5,  8,  3, 24, 19, 18, 21,  2, 10,  6,  7,
+       13,  1, 23, 12, 15,  4, 14, 25, -1]))
+('Unique value for ', 'GeographicField36A', ' : ', array([ 3, 17,  9,  8, 10, 15, 13, 12,  4,  5,  6, 21, 11,  7, 16, 20, 18,
+       14,  1, 24,  2, 22, 23, 25, 19, -1]))
+('Unique value for ', 'GeographicField36B', ' : ', array([ 2, 23, 13, 11, 15, 12, 22, 21, 20, 18,  3, 19, 14,  5, 25,  9, 17,
+        4, 10,  8,  6, 24, 16,  7,  1, -1]))
+('Unique value for ', 'GeographicField37A', ' : ', array([15, 11,  4,  3,  2,  7,  6,  5,  1, 14,  8, 10, 22, 12, -1, 13,  9,
+       16, 25, 23, 18, 21, 24, 17, 20, 19]))
+('Unique value for ', 'GeographicField37B', ' : ', array([24, 21, 10,  8,  6,  2, 16, 15, 11,  1, 23, 18, 20, 25,  9, 12, 22,
+       -1,  7,  4,  5, 19,  3, 13, 14, 17]))
+('Unique value for ', 'GeographicField38A', ' : ', array([ 2, 13, 14,  4, 12,  9,  7,  8, 15, 25, 10,  5,  6, 16, 11,  3, 20,
+       23,  1, 18, 19, 17, 24, 22, 21, -1]))
+('Unique value for ', 'GeographicField38B', ' : ', array([ 2, 21, 22,  3, 19, 14,  9, 12, 25, 17, 10, 15,  5,  6, 23,  8, 13,
+       11, 18, 20, 16,  4, 24,  1,  7, -1]))
+('Unique value for ', 'GeographicField39A', ' : ', array([15,  9, 17,  4,  6,  8,  5,  7,  2, 21, 23, 11, 10, 16, 13, 25,  1,
+        3, 18, 12, 20, 14, 19, 22, 24, -1]))
+('Unique value for ', 'GeographicField39B', ' : ', array([23, 17, 24, 18,  6, 11, 16,  9, 12, 13,  2, 25, 20, 19,  5, 22, 15,
+        1,  3,  7, 14,  4, 21,  8, 10, -1]))
+('Unique value for ', 'GeographicField40A', ' : ', array([ 1, 12, 10,  2,  6, 21,  8, 25,  3,  5, 13,  7, 11,  4,  9, 19, 16,
+       14, 22, 20, 18, 15, 17, 23, 24, -1]))
+('Unique value for ', 'GeographicField40B', ' : ', array([ 1, 21, 16, 15, 10, 24, 13, 25,  2,  5, 12,  4, 22, 11, 19,  8,  7,
+        9, 14, 17,  6, 20, 18, 23,  3, -1]))
+('Unique value for ', 'GeographicField41A', ' : ', array([15, 25, 24, 13, 18, 23,  4, 21, 16, 14,  3, 19,  1,  2,  9, 12,  7,
+       11, 22, 17, 10, 20,  5,  8,  6, -1]))
+('Unique value for ', 'GeographicField41B', ' : ', array([13, 25, 22,  9, 17, 16, 18, 20,  6, 19, 14, 11,  4, 10, 24,  1, 23,
+       12,  7,  3, 21,  2,  8,  5, 15, -1]))
+('Unique value for ', 'GeographicField42A', ' : ', array([ 9, 15, 12,  7, 24, 17, 10, 16, 11,  8,  5, 14,  6, 19, 18,  4, 13,
+       22,  2,  3,  1, 21, 23, 25, 20, -1]))
+('Unique value for ', 'GeographicField42B', ' : ', array([10, 21, 15,  7, 25, 22, 12, 13,  8,  3, 19,  9,  6, 18,  5, 24, 23,
+       16, 17, 14,  4,  1,  2, 11, 20, -1]))
+('Unique value for ', 'GeographicField43A', ' : ', array([ 2, 10, 12, 25, 11,  4, 23,  9, 22,  3, 15,  5,  1, 14,  7, 20,  8,
+       21,  6, 24, 18, 19, 13, 16, 17, -1]))
+('Unique value for ', 'GeographicField43B', ' : ', array([ 2, 13, 20, 25, 12, 16,  4, 24, 11,  9, 22,  5, 15, 17, 19,  1,  6,
+       23, 14,  7,  8, 10,  3, 18, 21, -1]))
+('Unique value for ', 'GeographicField44A', ' : ', array([ 8, 23, 21,  3, 24, 17, 11, 12, 14,  9, 19,  4, 10, 15, 25, 18, 20,
+       22, 13,  7,  1, 16,  5,  6,  2, -1]))
+('Unique value for ', 'GeographicField44B', ' : ', array([ 4, 24, 22,  1, 25, 19, 11, 12,  5, 15,  7, 20,  2,  8, 18, 16,  9,
+       21, 23,  6,  3, 17, 13, 14, 10, -1]))
+('Unique value for ', 'GeographicField45A', ' : ', array([20, 11, 24, 14,  9, 25,  7,  3, 22,  8, 23,  2, 12, 10, 13, 19,  5,
+        1, 21,  6, 18,  4, 15, 17, 16, -1]))
+('Unique value for ', 'GeographicField45B', ' : ', array([22, 15, 25, 11, 12, 18,  7,  5, 24,  8, 10, 16,  3,  9, 20, 14,  1,
+       21,  6,  4, 13,  2, 19, 17, 23, -1]))
+('Unique value for ', 'GeographicField46A', ' : ', array([10, 21, 20,  6, 25, 14, 16, 15, 13,  9,  4, 19, 22, 12, 18,  8, 11,
+       17,  7,  1,  2,  5, 23,  3, 24, -1]))
+('Unique value for ', 'GeographicField46B', ' : ', array([ 8, 24, 22,  2, 25, 16, 17, 11, 15,  7,  5,  9,  1, 20,  4, 14, 19,
+       10,  3, 23, 13, 21, 12,  6, 18, -1]))
+('Unique value for ', 'GeographicField47A', ' : ', array([ 6,  7,  5, 13,  8, 21, 12, 25,  1, 19, 10,  2,  9, 22, 24,  4, 11,
+        3, 14, 15, 23, 18, 20, 16, 17, -1]))
+('Unique value for ', 'GeographicField47B', ' : ', array([ 5, 11, 13, 14,  3,  6, 21, 10, 16,  7, 24, 19, 25, 15, 12,  1,  8,
+        9, 23, 18, 17, 20,  2,  4, -1]))
+('Unique value for ', 'GeographicField48A', ' : ', array([15, 21, 23, 11, 22,  6, 20,  7, 12, 19, 24,  9, 18, 17,  1,  8, 10,
+       16, 13,  5, 14,  4, 25,  2,  3, -1]))
+('Unique value for ', 'GeographicField48B', ' : ', array([13, 21, 23,  8, 22,  3, 20,  4,  9, 19, 24,  6, 17, 18, 15,  1,  5,
+        7, 10, 12,  2, 11, 25, 14, 16, -1]))
+('Unique value for ', 'GeographicField49A', ' : ', array([19, 18, 20, 21,  4, 22, 14,  1, 16, 25, 12, 17, 15, 10, 11,  6,  8,
+        7, 13,  5, 23, 24,  9, -1,  3,  2]))
+('Unique value for ', 'GeographicField49B', ' : ', array([18, 15, 19, 21,  2, 23,  7,  1, 11, 25,  5, 13,  9,  4, 20, 14, 12,
+       22, 17, 16, 10,  8,  6,  3, 24, -1]))
+('Unique value for ', 'GeographicField50A', ' : ', array([16, 20, 18, 17,  4,  9, 21,  2, 25, 23,  3, 22, 11, 15, 13, 19,  8,
+       14, 10,  1,  7, 12,  6, 24,  5, -1]))
+('Unique value for ', 'GeographicField50B', ' : ', array([14, 20, 16, 15,  2, 17,  4, 22,  1, 25, 24,  7, 12,  9, 19, 21, 23,
+       11, 18, 10,  6,  5,  8, 13,  3, -1]))
+('Unique value for ', 'GeographicField51A', ' : ', array([21, 13, 18, 25,  9,  4, 11, 12, 14, 16, 20, 22, 15, 17,  1, 10,  8,
+        2,  3, 19,  6,  5,  7, 24, -1, 23]))
+('Unique value for ', 'GeographicField51B', ' : ', array([23, 12, 20, 25,  7,  2, 10, 15, 17,  9, 24, 16, 18,  1,  8,  6,  5,
+       13, 11, 21, 19,  4, 22, 14,  3, -1]))
+('Unique value for ', 'GeographicField52A', ' : ', array([21, 12, 19, 13, 25,  7, 20,  8,  5, 10, 11, 14, 17, 16, 18, 15,  1,
+        2,  9,  3, 22,  6, 23,  4, -1, 24]))
+('Unique value for ', 'GeographicField52B', ' : ', array([23, 12, 21, 25,  5, 22,  6,  3,  8, 10, 15, 19, 17, 20, 16,  1, 14,
+       11,  9, 13, 18,  2,  7, 24,  4, -1]))
+('Unique value for ', 'GeographicField53A', ' : ', array([16, 15, 20, 17,  1, 24,  8, 21,  6, 14, 25, 11, 19, 22, 18, 12, 13,
+        3,  4, 23,  9,  5,  7,  2, 10, -1]))
+('Unique value for ', 'GeographicField53B', ' : ', array([11,  9, 19, 13,  1, 24,  3, 20,  2,  8, 12, 25,  5, 15, 21, 18, 22,
+       14, 10,  6, 16,  7, 23,  4, 17, -1]))
+('Unique value for ', 'GeographicField54A', ' : ', array([22, 13, 11,  5, 16,  7, 21, 17, 24, 18,  9, 19, 14,  8,  3, 15,  1,
+       20, 12, 10, 23,  6, -1, 25,  4,  2]))
+('Unique value for ', 'GeographicField54B', ' : ', array([24, 11,  8,  2, 17,  4, 23, 18, 25, 20,  6, 13,  9,  5, 19, 21, 14,
+        1, 15, 22, 10, 16, 12,  3,  7, -1]))
+('Unique value for ', 'GeographicField55A', ' : ', array([ 7, 11,  3, 20,  2, 16,  4, 12, 10,  9,  1,  5, 25,  6,  8, 13, 17,
+       19, 15, 14, 22, 18, 23, -1, 24, 21]))
+('Unique value for ', 'GeographicField55B', ' : ', array([14, 20,  3,  4, 24,  1, 23,  6, 18, 17, 21,  9,  2, 25, 12, 11, 15,
+       16, 13, 19,  7, 22, 10,  8,  5, -1]))
+('Unique value for ', 'GeographicField56A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField56B', ' : ', array([17,  9,  5,  7, 25, 20, 11, 22,  3, 15,  8, 16,  6,  2, 18, 21,  4,
+       12, 24, 14, 13, 10, 23, 19, -1]))
+('Unique value for ', 'GeographicField57A', ' : ', array([15, 18, 21, 14, 11,  8,  7, 16, 12,  9, 25, 10, 17,  3, 22,  6,  4,
+       20, 19,  1, 13, 23,  5,  2, 24, -1]))
+('Unique value for ', 'GeographicField57B', ' : ', array([17, 21, 24, 14,  9,  5,  3, 22, 15, 19, 11, 10, 25,  7, 20,  6,  1,
+       18,  4,  2,  8, 16, 23, 13, 12, -1]))
+('Unique value for ', 'GeographicField58A', ' : ', array([14,  8, 12, 10, 11,  3, 19,  9, 22,  5, 20,  7, 15, 13, 18, 23,  1,
+        6, 17, 16, 25,  2,  4, 24, 21, -1]))
+('Unique value for ', 'GeographicField58B', ' : ', array([18,  7, 15, 10, 12,  2, 23,  9, 24,  4, 13,  6, 19,  8, 16, 22,  5,
+       11, 14, 25,  1, 17,  3, 21, 20, -1]))
+('Unique value for ', 'GeographicField59A', ' : ', array([ 9, 10, 15,  6, 18,  2, 16, 13,  8, 25,  7, 20, 19, 11, 14,  4, 12,
+        5,  3, 17,  1, 21, 22, 24, 23, -1]))
+('Unique value for ', 'GeographicField59B', ' : ', array([ 9, 10, 18,  5, 22, 11,  1, 20, 16,  8, 25,  6, 24, 23, 13, 12, 17,
+        3, 15, 14,  4,  2, 21,  7, 19, -1]))
+('Unique value for ', 'GeographicField60A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField60B', ' : ', array([ 8, 11, 21, 10, 23, 19,  3,  9, 14, 24, 17,  7, 18, 16, 22,  1,  2,
+       12, 25, 20,  6,  4,  5, 15, 13, -1]))
+('Unique value for ', 'GeographicField61A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField61B', ' : ', array([18, 17, 11,  9, 25, 13, 12,  2, 22, 14,  7,  8, 21,  6, 20,  5, 19,
+        4, 23,  3, 16, 10, 15, 24, -1]))
+('Unique value for ', 'GeographicField62A', ' : ', array([-1, 25]))
+('Unique value for ', 'GeographicField62B', ' : ', array([10, 20,  8, 21, 12, 14, 13, 18, 19,  9, 17, 25, 22, 24, 23, 11, 16,
+       15, -1]))
+('Unique value for ', 'GeographicField63', ' : ', array(['N', 'Y', ' '], dtype=object))
+('Unique value for ', 'GeographicField64', ' : ', array(['CA', 'NJ', 'TX', 'IL'], dtype=object))
