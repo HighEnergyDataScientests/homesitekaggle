@@ -74,6 +74,9 @@ features = [s for s in train.columns.ravel().tolist() if s != 'QuoteConversion_F
 
 preds_df = pd.DataFrame()
 caseNum = 1
+numPos = len(train[train['QuoteConversion_Flag'] == 1])
+numNeg = len(train[train['QuoteConversion_Flag'] == 0])
+scaleRatio = numNeg / numPos
 
 for seedValue in seeds:
 	timestr = time.strftime("%Y%m%d-%H%M%S")
@@ -81,17 +84,18 @@ for seedValue in seeds:
 	params = {"objective": "binary:logistic",
         	  "eta": 0.3,
         	  "nthread":3,
-        	  "max_depth": 10,
-        	  "subsample": 0.8,
-        	  "colsample_bytree": 0.8,
+        	  "max_depth": 8,
+        	  "subsample": 0.7,
+        	  "colsample_bytree": 0.7,
         	  "eval_metric": "auc",
+		  'scale_pos_weight': scaleRatio,
         	  "silent": 1,
         	  "seed": seedValue
         	  }
 	num_boost_round = 1000
 
 	print("## Train a XGBoost model ", caseNum)
-	X_train, X_valid = train_test_split(train, test_size=0.05)
+	X_train, X_valid = train_test_split(train, test_size=0.1)
 	y_train = X_train['QuoteConversion_Flag']
 	y_valid = X_valid['QuoteConversion_Flag']
 	dtrain = xgb.DMatrix(X_train[features], y_train)
