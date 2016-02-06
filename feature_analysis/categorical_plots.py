@@ -37,19 +37,36 @@ df_neg = train.loc[train['QuoteConversion_Flag'] == 0] # not bought
 features = [s for s in train.columns.ravel().tolist() if s != 'QuoteConversion_Flag']
 
 # Create plots
+print("## Creating plots")
 for f in features:
     if train[f].dtype.name == 'object':
+
+        # Get the counts of the categories for both pos/neg series
+        counts_pos = df_pos[f].value_counts().sort_index()
+        counts_neg = df_neg[f].value_counts().sort_index()
+        counts_pos.name = 'conv'
+        counts_neg.name = 'not_conv'
+
+        # Combine into one dataframe
+        feat_counts_df = pd.concat([counts_pos, counts_neg], axis=1)
+
+        # Do some calculations
+        feat_counts_df['sum'] = feat_counts_df.sum(axis=1)
+        feat_counts_df['conv_pct'] = feat_counts_df['conv']/feat_counts_df['sum']
+
+#         pd.to_csv(
+
+        # Plot
         plt.clf() # Clear figure
-        width = 0.4
+        feat_counts_df.plot(kind='bar')
+
+        # Labels
         plt.xlabel(f)
         plt.ylabel('Freq')
         plt.title(f + ' Bar Graph')
-
-        df_pos[f].value_counts().plot(kind='bar', color='blue', width=width, position=1)
-        df_neg[f].value_counts().plot(kind='bar', color='red', width=width, position=0)
-
         plt.legend(labels=['Converted', 'Not Converted'])
 
+        # Save
         plt.savefig('plots_cat/' + f + '.png')
 
     # else: # draw histograms
