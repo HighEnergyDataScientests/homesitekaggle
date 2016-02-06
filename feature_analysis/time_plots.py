@@ -1,11 +1,11 @@
 # -----------------------------------------------------------------------------
-#  Name: categorical_plots
-#  Purpose: Plot bar graphs for all categorical fields
+#  Name: time_plots
+#  Purpose: Plot fields vs time
 #
 #
 # -----------------------------------------------------------------------------
 """
-Make a bar graph for all categorical fields.
+Make a plot of non-categorical fields vs time.
 """
 
 
@@ -38,29 +38,16 @@ features = [s for s in train.columns.ravel().tolist() if s != 'QuoteConversion_F
 
 # Create plots
 for f in features:
-    if train[f].dtype.name == 'object':
+    if train[f].dtype.name != 'object' and f != 'Date':
         plt.clf() # Clear figure
-        width = 0.4
-        plt.xlabel(f)
-        plt.ylabel('Freq')
-        plt.title(f + ' Bar Graph')
 
-        df_pos[f].value_counts().plot(kind='bar', color='blue', width=width, position=1)
-        df_neg[f].value_counts().plot(kind='bar', color='red', width=width, position=0)
+        plt.xlabel('Date')
+        plt.ylabel(f)
+        plt.title(f + ' vs. Date')
+
+        df_pos.plot(x='Date', y=f, color='b')
+        df_neg.plot(x='Date', y=f, color='r')
 
         plt.legend(labels=['Converted', 'Not Converted'])
 
-        plt.savefig('plots_cat/' + f + '.png')
-
-    # else: # draw histograms
-    #     plt.clf()
-    #     plt.xlabel(f)
-    #     plt.ylabel('Freq')
-    #     plt.title(f + ' Histogram')
-    #
-    #     plt.hist(df_pos[f], label='Converted')
-    #     plt.hist(df_neg[f], label='Not Converted')
-    #
-    #     plt.legend()
-    #
-    #     plt.savefig('plots_histos/' + f + '.png')
+        plt.savefig('plots_time/' + f + '.png')
